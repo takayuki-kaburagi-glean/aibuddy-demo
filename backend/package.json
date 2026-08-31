@@ -1,0 +1,19 @@
+{
+  "name": "a2a-registry-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A2A fetch/auth proxy: agent-card fetch, OAuth (authcode+PKCE), A2A JSON-RPC + SSE",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,30 @@
+node_modules/
+
+# Local data (contains OAuth tokens, registry, caches, settings) — never commit
+backend/data/*.json
+!backend/data/registry.seed.json
+
+# Secrets / env — commit only the .env.example template
+.env
+.env.*
+!.env.example
+
+# Build output
+frontend/dist/
+dist/
+
+# Python (slide-generation venv, caches)
+.venv_slides/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Logs & OS files
+logs/
+*.log
+.DS_Store
+
+# Internal/demo materials (not for the public repo)
+docs/
+*.pptx

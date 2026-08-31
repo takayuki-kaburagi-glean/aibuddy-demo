@@ -1,0 +1,21 @@
+{
+  "name": "ai-buddy-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI Buddy デモ — Glean をバックエンド（MCP personal memory / A2A ルーティング / LLM Gateway）に、パーソナライズ＆エージェント横断ルーティングを実演",
+  "scripts": {
+    "predev": "node scripts/stop.mjs",
+    "stop": "node scripts/stop.mjs",
+    "dev": "concurrently -n agents,backend,frontend -c green,blue,magenta \"npm:dev:agents\" \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:agents": "node examples/agents/domain.mjs",
+    "dev:backend": "SFW_BYPASS=1 npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "agents": "node examples/agents/domain.mjs",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "postinstall": "npm --prefix backend install && npm --prefix frontend install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
